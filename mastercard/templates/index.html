@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stock Price Prediction</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center my-5">Stock Price Prediction</h1>
+      <form method="post">
+        <div class="form-group">
+          <label for="open">Open Price:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="open"
+            name="open"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="high">High Price:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="high"
+            name="high"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="low">Low Price:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="low"
+            name="low"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
+      </form>
+      {% if prediction %}
+      <div class="alert alert-success mt-3" role="alert">
+        Predicted Close Price: {{ prediction }}
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
